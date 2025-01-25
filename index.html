@@ -4,62 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Свадебное приглашение</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link href="styles.css" rel="stylesheet">
 </head>
 <body>
     <!-- Первый блок -->
-    <section class="block header">
-        <h1>СВАДЕБНОЕ ПРИГЛАШЕНИЕ</h1>
-        <p>СЕРГЕЙ И АЛЕКСАНДРА</p>
-        <div class="scroll-down" onclick="scrollToNext()">Листать далее ↓</div>
+    <section class="block" id="block1">
+        <div class="content">
+            <h1>СВАДЕБНОЕ ПРИГЛАШЕНИЕ</h1>
+            <p>СЕРГЕЙ И АЛЕКСАНДРА</p>
+        </div>
+        <a class="scroll-down" href="#block2">Листать далее ↓</a>
     </section>
 
     <!-- Второй блок -->
-    <section class="block welcome">
-        <p>Уважаемые родные и близкие, приглашаем вас на нашу свадьбу! Всех очень ждём!</p>
-        <div class="scroll-down" onclick="scrollToNext()">Листать далее ↓</div>
+    <section class="block" id="block2">
+        <div class="content">
+            <p>Уважаемые родные и близкие, приглашаем вас на нашу свадьбу! Всех очень ждём!</p>
+        </div>
+        <a class="scroll-down" href="#block3">Листать далее ↓</a>
     </section>
 
     <!-- Третий блок -->
-    <section class="block details">
-        <h2>ДЕТАЛИ СВАДЬБЫ</h2>
-        <p>Дата: <strong>14 июня 2025</strong></p>
-        <p>Церемония: <strong>12:00</strong> в ЗАГСе</p>
-        <p>Банкет: <strong>16:00</strong> в КРЦ "Никольский"</p>
-        <div class="scroll-down" onclick="scrollToNext()">Листать далее ↓</div>
+    <section class="block" id="block3">
+        <div class="content">
+            <h2>ДЕТАЛИ СВАДЬБЫ</h2>
+            <p>Дата: <strong>14 июня 2025</strong></p>
+            <p>Церемония: <strong>12:00</strong> в ЗАГСе</p>
+            <p>Банкет: <strong>16:00</strong> в КРЦ "Никольский"</p>
+        </div>
+        <a class="scroll-down" href="#block4">Листать далее ↓</a>
     </section>
 
     <!-- Четвёртый блок -->
-    <section class="block dress-code">
-        <h2>ДРЕСС-КОД</h2>
-        <div class="dress-colors">
-            <div class="color">
-                <img src="black.png" alt="Чёрный">
-                <p>Чёрный</p>
-            </div>
-            <div class="color">
-                <img src="white.png" alt="Белый">
-                <p>Белый</p>
-            </div>
-            <div class="color">
-                <img src="gold.png" alt="Золотистый">
-                <p>Золотистый</p>
-            </div>
-            <div class="color">
-                <img src="silver.png" alt="Серебристый">
-                <p>Серебристый</p>
+    <section class="block" id="block4">
+        <div class="content">
+            <h2>ДРЕСС-КОД</h2>
+            <div class="dress-colors">
+                <div class="color">
+                    <img src="black.png" alt="Чёрный">
+                    <p>Чёрный</p>
+                </div>
+                <div class="color">
+                    <img src="white.png" alt="Белый">
+                    <p>Белый</p>
+                </div>
+                <div class="color">
+                    <img src="gold.png" alt="Золотистый">
+                    <p>Золотистый</p>
+                </div>
+                <div class="color">
+                    <img src="silver.png" alt="Серебристый">
+                    <p>Серебристый</p>
+                </div>
             </div>
         </div>
     </section>
-
-    <script>
-        // Скрипт для пролистывания
-        function scrollToNext() {
-            const currentSection = document.querySelector('.block:target') || document.querySelector('.block');
-            const nextSection = currentSection.nextElementSibling || currentSection;
-            nextSection.scrollIntoView({ behavior: 'smooth' });
-        }
-    </script>
 </body>
-</html>   
+</html>
