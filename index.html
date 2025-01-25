@@ -13,9 +13,7 @@
             <h1>СВАДЕБНОЕ ПРИГЛАШЕНИЕ</h1>
             <p>СЕРГЕЙ И АЛЕКСАНДРА</p>
         </div>
-        <div class="scroll-down" onclick="scrollToNext('#block2')">
-            <span class="arrow">↓</span>
-        </div>
+        <a class="next-block" href="#block2"></a>
     </section>
 
     <!-- Второй блок -->
@@ -23,9 +21,7 @@
         <div class="content">
             <p>Уважаемые родные и близкие, приглашаем вас на нашу свадьбу! Всех очень ждём!</p>
         </div>
-        <div class="scroll-down" onclick="scrollToNext('#block3')">
-            <span class="arrow">↓</span>
-        </div>
+        <a class="next-block" href="#block3"></a>
     </section>
 
     <!-- Третий блок -->
@@ -36,9 +32,7 @@
             <p>Церемония: <strong>12:00</strong> в ЗАГСе</p>
             <p>Банкет: <strong>16:00</strong> в КРЦ "Никольский"</p>
         </div>
-        <div class="scroll-down" onclick="scrollToNext('#block4')">
-            <span class="arrow">↓</span>
-        </div>
+        <a class="next-block" href="#block4"></a>
     </section>
 
     <!-- Четвёртый блок -->
@@ -67,11 +61,15 @@
     </section>
 
     <script>
-        // Функция для плавного прокручивания
-        function scrollToNext(targetId) {
-            const target = document.querySelector(targetId);
-            target.scrollIntoView({ behavior: 'smooth' });
-        }
+        // Плавная прокрутка при клике на ссылки
+        document.querySelectorAll('a.next-block').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
     </script>
 </body>
 </html>
