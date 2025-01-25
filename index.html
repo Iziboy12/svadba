@@ -10,29 +10,29 @@
 <body>
     <!-- Первый блок -->
     <section class="block header">
-        <h1>Свадебное приглашение</h1>
-        <p>Сергей и Александра</p>
-        <div class="scroll-down">Листать далее ↓</div>
+        <h1>СВАДЕБНОЕ ПРИГЛАШЕНИЕ</h1>
+        <p>СЕРГЕЙ И АЛЕКСАНДРА</p>
+        <div class="scroll-down" onclick="scrollToNext()">Листать далее ↓</div>
     </section>
 
     <!-- Второй блок -->
     <section class="block welcome">
         <p>Уважаемые родные и близкие, приглашаем вас на нашу свадьбу! Всех очень ждём!</p>
-        <div class="scroll-down">Листать далее ↓</div>
+        <div class="scroll-down" onclick="scrollToNext()">Листать далее ↓</div>
     </section>
 
     <!-- Третий блок -->
     <section class="block details">
-        <h2>Детали свадьбы</h2>
+        <h2>ДЕТАЛИ СВАДЬБЫ</h2>
         <p>Дата: <strong>14 июня 2025</strong></p>
         <p>Церемония: <strong>12:00</strong> в ЗАГСе</p>
         <p>Банкет: <strong>16:00</strong> в КРЦ "Никольский"</p>
-        <div class="scroll-down">Листать далее ↓</div>
+        <div class="scroll-down" onclick="scrollToNext()">Листать далее ↓</div>
     </section>
 
     <!-- Четвёртый блок -->
     <section class="block dress-code">
-        <h2>Дресс-код</h2>
+        <h2>ДРЕСС-КОД</h2>
         <div class="dress-colors">
             <div class="color">
                 <img src="black.png" alt="Чёрный">
@@ -52,5 +52,14 @@
             </div>
         </div>
     </section>
+
+    <script>
+        // Скрипт для пролистывания
+        function scrollToNext() {
+            const currentSection = document.querySelector('.block:target') || document.querySelector('.block');
+            const nextSection = currentSection.nextElementSibling || currentSection;
+            nextSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
 </body>
-</html>
+</html>   
