@@ -13,9 +13,9 @@
             <h1>СВАДЕБНОЕ ПРИГЛАШЕНИЕ</h1>
             <p>СЕРГЕЙ И АЛЕКСАНДРА</p>
         </div>
-        <a class="scroll-down" href="#block2">
+        <div class="scroll-down" onclick="scrollToNext('#block2')">
             <span class="arrow">↓</span>
-        </a>
+        </div>
     </section>
 
     <!-- Второй блок -->
@@ -23,9 +23,9 @@
         <div class="content">
             <p>Уважаемые родные и близкие, приглашаем вас на нашу свадьбу! Всех очень ждём!</p>
         </div>
-        <a class="scroll-down" href="#block3">
+        <div class="scroll-down" onclick="scrollToNext('#block3')">
             <span class="arrow">↓</span>
-        </a>
+        </div>
     </section>
 
     <!-- Третий блок -->
@@ -36,9 +36,9 @@
             <p>Церемония: <strong>12:00</strong> в ЗАГСе</p>
             <p>Банкет: <strong>16:00</strong> в КРЦ "Никольский"</p>
         </div>
-        <a class="scroll-down" href="#block4">
+        <div class="scroll-down" onclick="scrollToNext('#block4')">
             <span class="arrow">↓</span>
-        </a>
+        </div>
     </section>
 
     <!-- Четвёртый блок -->
@@ -65,5 +65,13 @@
             </div>
         </div>
     </section>
+
+    <script>
+        // Функция для плавного прокручивания
+        function scrollToNext(targetId) {
+            const target = document.querySelector(targetId);
+            target.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
 </body>
 </html>
