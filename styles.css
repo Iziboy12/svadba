@@ -1,73 +1,72 @@
-/* Общие стили */
 body {
     font-family: 'Playfair Display', serif;
-    background-color: #ffffff;
-    color: #000000;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
-}
-
-/* Заголовок */
-header {
+    background: #fff5e1;
+    color: #333;
     text-align: center;
-    background-color: #000000;
-    color: #ffffff;
-    padding: 20px 0;
 }
 
-h1 {
-    font-size: 2.5rem;
+.header {
+    background: #000;
+    color: #FFD700;
+    padding: 30px 20px;
+    font-family: 'Great Vibes', cursive;
+}
+
+.header h1 {
     margin: 0;
-    color: #FFD700; /* Золотой цвет */
+    font-size: 2.5rem;
 }
 
-/* Секции */
-section {
+.header p {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.section {
     padding: 20px;
-    border-bottom: 1px solid #e0e0e0;
+    margin: 20px 10px;
+    border: 2px solid #FFD700;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-    color: #FFD700; /* Золотой цвет */
+.section h2 {
+    color: #FFD700;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
 }
 
-/* Дресс-код */
-.colors {
+.dress-colors {
     display: flex;
-    gap: 20px;
     justify-content: center;
-    flex-wrap: wrap;
+    gap: 20px;
 }
 
-.color-item {
-    text-align: center;
-}
-
-.color-item img {
-    width: 100px;
-    height: 100px;
+.color img {
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    border: 2px solid #FFD700; /* Золотая рамка */
+    border: 2px solid #FFD700;
+}
+
+.color p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #333;
 }
 
 /* Адаптивность */
 @media (max-width: 768px) {
-    body {
-        font-size: 1.2rem;
+    .dress-colors {
+        flex-wrap: wrap;
+        gap: 15px;
     }
 
-    h1 {
-        font-size: 2rem;
-    }
-
-    .colors {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .color-item img {
-        width: 80px;
-        height: 80px;
+    .color img {
+        width: 70px;
+        height: 70px;
     }
 }
