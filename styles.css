@@ -27,15 +27,16 @@ body {
     cursor: pointer;
 }
 
-/* Стили для первого блока */
+/* Первый блок */
 .header {
     background: #000;
     color: #FFD700;
     font-family: 'Great Vibes', cursive;
+    text-transform: uppercase;
 }
 
 .header h1 {
-    font-size: 3.5rem;
+    font-size: 4rem;
     margin: 0;
 }
 
@@ -44,13 +45,13 @@ body {
     margin: 10px 0 0;
 }
 
-/* Стили для второго блока */
+/* Второй блок */
 .welcome p {
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: #333;
 }
 
-/* Стили для третьего блока */
+/* Третий блок */
 .details {
     background: #fff;
     border: 2px solid #FFD700;
@@ -65,10 +66,10 @@ body {
 }
 
 .details p {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
-/* Стили для четвёртого блока */
+/* Четвёртый блок */
 .dress-code {
     background: #fff;
     border: 2px solid #FFD700;
@@ -108,9 +109,4 @@ body {
         width: 70px;
         height: 70px;
     }
-}
-
-/* Анимация прокрутки */
-.scroll-down:hover {
-    text-decoration: underline;
 }
