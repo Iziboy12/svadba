@@ -1,42 +1,86 @@
+/* Общие стили */
 body {
     font-family: 'Playfair Display', serif;
     margin: 0;
     padding: 0;
     background: #fff5e1;
     color: #333;
-    text-align: center;
+    overflow: hidden;
 }
 
+.block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    padding: 20px;
+    position: relative;
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 20px;
+    font-size: 1.2rem;
+    color: #FFD700;
+    cursor: pointer;
+}
+
+/* Стили для первого блока */
 .header {
     background: #000;
     color: #FFD700;
-    padding: 30px 20px;
     font-family: 'Great Vibes', cursive;
 }
 
 .header h1 {
+    font-size: 3.5rem;
     margin: 0;
-    font-size: 2.5rem;
 }
 
 .header p {
-    margin: 0;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    margin: 10px 0 0;
 }
 
-.section {
-    padding: 20px;
-    margin: 20px 10px;
+/* Стили для второго блока */
+.welcome p {
+    font-size: 1.8rem;
+    color: #333;
+}
+
+/* Стили для третьего блока */
+.details {
+    background: #fff;
     border: 2px solid #FFD700;
     border-radius: 10px;
-    background: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.section h2 {
+.details h2 {
+    font-size: 2rem;
     color: #FFD700;
-    font-size: 1.8rem;
     margin-bottom: 15px;
+}
+
+.details p {
+    font-size: 1.2rem;
+}
+
+/* Стили для четвёртого блока */
+.dress-code {
+    background: #fff;
+    border: 2px solid #FFD700;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dress-code h2 {
+    font-size: 2rem;
+    color: #FFD700;
+    margin-bottom: 20px;
 }
 
 .dress-colors {
@@ -60,13 +104,13 @@ body {
 
 /* Адаптивность */
 @media (max-width: 768px) {
-    .dress-colors {
-        flex-wrap: wrap;
-        gap: 15px;
-    }
-
     .color img {
         width: 70px;
         height: 70px;
     }
+}
+
+/* Анимация прокрутки */
+.scroll-down:hover {
+    text-decoration: underline;
 }
