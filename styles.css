@@ -5,6 +5,7 @@ body {
     padding: 0;
     overflow-x: hidden;
     background-color: #fff8e1; /* Нежный фон */
+    font-size: 18px; /* Более крупный текст */
 }
 
 .block {
@@ -39,24 +40,19 @@ body {
 .dress-colors {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Расстояние между цветами */
+    gap: 30px; /* Расстояние между цветами */
     margin-top: 20px;
 }
 
 .color {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     width: 100px;
     height: 100px;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 14px;
-    font-weight: bold;
+    border-radius: 50%; /* Делает цветовые блоки круглыми */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Добавляем эффект нажатия */
 }
 
-.color p {
-    margin: 0;
+.color:hover {
+    transform: scale(1.1); /* Увеличение при наведении */
 }
