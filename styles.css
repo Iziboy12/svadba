@@ -1,32 +1,64 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #fff8e1; /* Нежный фон */
+    font-size: 18px; /* Более крупный текст */
+}
+
+/* Стили для блоков */
+.block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    margin: 20px; /* Разделение между блоками */
+    border: 5px solid gold; /* Золотистая рамка */
+    border-radius: 15px; /* Скруглённые углы */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
+}
+
+.content {
+    max-width: 600px;
+}
+
 /* Стили для блока "ДРЕСС-КОД" */
 .dress-colors {
     display: flex;
     justify-content: center;
-    gap: 30px; /* Расстояние между кругами */
+    gap: 30px; /* Расстояние между цветами */
     margin-top: 20px;
     flex-wrap: wrap; /* Чтобы круги переносились на новую строку */
 }
 
 .color {
-    width: 80px; /* Уменьшаем размер для мобильных */
-    height: 80px;
-    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Делает цветовые блоки круглыми */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease; /* Добавляем эффект нажатия */
 }
 
 .color:hover {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Увеличение при наведении */
 }
 
-/* Адаптация для маленьких экранов */
+/* Адаптация для мобильных устройств */
 @media (max-width: 768px) {
     .dress-colors {
         gap: 15px; /* Уменьшаем расстояние между кругами */
     }
+
     .color {
-        width: 60px; /* Ещё больше уменьшаем круги */
+        width: 60px; /* Уменьшаем размер кругов */
         height: 60px;
     }
 }
